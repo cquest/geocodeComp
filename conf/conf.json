@@ -1,0 +1,33 @@
+{
+    "map": {
+        "osmUrl": "http://a.tile.openstreetmap.fr/osmfr/"
+    },
+    "geocoders": [{
+            "name": "Nominatim",
+            "iconColor": "blue",
+            "proxyPhp": "GeocodeNominatimProxy.php",
+            "jsFunction": "geocodeNominatim",
+            "urlGeocoder" : "http://nominatim.openstreetmap.org/search"
+        }, {
+            "name": "Google",
+            "iconColor": "orange",
+            "proxyPhp": "GeocodeGoogleProxy.php",
+            "jsFunction": "geocodeGoogle",
+            "urlGeocoder" : "http://maps.google.com/maps/api/geocode/json",
+            "proxy" : true
+        },
+	{
+		"name": "Photon",
+		"iconColor": "green",
+		"proxyPhp": "GeocodePhotonProxy.php",
+		"jsFunction": "geocodePhoton",
+		"urlGeocoder": "http://france.photon.fluv.io/api/"
+	}
+    ],
+    "proxy" : {
+        "host": "10.xxx.xxx.xxx",
+        "port": "xxxx",        
+        "user": "xxxxxxxx",
+        "pwd": "xxxxxxx"
+    }
+}
